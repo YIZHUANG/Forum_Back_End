@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 require('./model/post');
 const Threads=mongoose.model('threads');
-const url = process.env.MONGOLAB_URI;
+const url = "mongodb://YI:a1234@ds135916.mlab.com:35916/forum";
 mongoose.connect(url);
 var app = express();
 var cors = require('cors');
