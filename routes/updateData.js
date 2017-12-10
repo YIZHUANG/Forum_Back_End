@@ -1,3 +1,7 @@
+var mongoose = require('mongoose');
+require('../model/post'); //import the schema
+const Threads=mongoose.model('threads'); //import the schema
+
 module.exports = app => {
   app.put('/comment/:postId',function(req,res){   //save comments to the post
     var threads=new Threads();

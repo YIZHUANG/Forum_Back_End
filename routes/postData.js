@@ -1,3 +1,7 @@
+var mongoose = require('mongoose');
+require('../model/post'); //import the schema
+const Threads=mongoose.model('threads'); //import the schema
+
 module.exports = app => {
   app.post('/api',function(req,res){    //post new threads.
     var threads=new Threads();         //will be saved stright to the database and render in the front-end side.
