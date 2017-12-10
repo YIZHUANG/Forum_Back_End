@@ -1,17 +1,6 @@
-Real-time forum. (You can post new threads, and comment to any threads.)
+Back-end for my React native app (post new threads, post new comments) .  
+https://github.com/YIZHUANG/Foodie_React-Native
 
-With a little bit of modifications, it can be a real-time chat.
+1.npm install
 
-How to use?
-
-1.install dependencies
-
-npm install
-
-2.Run it
-
-npm run server    (You can change it in package json.)
-
-before you run it, make sure to go to server.js to change the URL to your own mongoDB database.
-
-If you don't like how all the variables are named, change it in model/post.js .
+2.npm run server  
