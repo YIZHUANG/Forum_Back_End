@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-const url = "mongodb://YI:a1234@ds135916.mlab.com:35916/forum";  // the url of the databse.
+const url = "";  // the url of the databse.
 mongoose.connect(url); //connect!
 
 var app = express();
