@@ -8,5 +8,11 @@ module.exports = app => {
       response.json(eachOne);
     });
   });
+  
+   app.get('/listOfPosts/:id', function(request, response) {     // find by id.
+    Threads.find({'_id':request.params.id}).then(eachOne => {
+      response.json(eachOne);
+    });
+  });
 
 }
