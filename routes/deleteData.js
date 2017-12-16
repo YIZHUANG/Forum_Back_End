@@ -13,7 +13,7 @@ module.exports = app => {
             res.status(500).send({ error: "could not delete post" });
           }
           else{
-            res.status(200).send({"deleted!"});
+            res.status(200).send("deleted!");
           }
         })
       }
