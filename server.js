@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-const url = "";  // the url of the databse.
+const url = "mongodb://YI:a1234@ds135916.mlab.com:35916/forum";  // the url of the databse.
 mongoose.connect(url); //connect!
 
 var app = express();
@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({
 require('./routes/apiRoutes')(app);   //routes for getting the data;
 require('./routes/postData')(app);  //routes for posting new data.
 require('./routes/updateData')(app);  //routes for updating data.
+require('./routes/deleteData')(app);  //routes for deleting data.
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function(){
