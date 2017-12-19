@@ -9,13 +9,7 @@ const url="mongodb://YI:a1234@ds135916.mlab.com:35916/forum";
 mongoose.connect(url); // use your own URL.
 
 const app = express();
-const cors = require('cors'); // allow corss-domain communication.
 
-app.use(cors());  // allow corss-domain communication.
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
- extended: false
-}));
 
 app.use(
   cookieSession({
