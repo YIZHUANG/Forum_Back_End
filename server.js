@@ -3,8 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const cookieSession= require('cookie-session'); //tell express to make use of cookies
 const passport=require('passport'); //tell express to make use of cookies
-require('./model/user');
-require('./services/passport');
+
 const url="mongodb://YI:a1234@ds135916.mlab.com:35916/forum";
 mongoose.connect(url); // use your own URL.
 
