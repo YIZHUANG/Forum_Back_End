@@ -1,8 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-const cookieSession= require('cookie-session'); //tell express to make use of cookies
-const passport=require('passport'); //tell express to make use of cookies
+
 require('./model/user');
 require('./services/passport');
 const url="mongodb://YI:a1234@ds135916.mlab.com:35916/forum";
@@ -17,12 +16,7 @@ app.use(bodyParser.urlencoded({
  extended: false
 }));
 
-app.use(
-  cookieSession({
-    maxAge:30 * 24 * 60 * 60 * 1000,    //30 days.     //how long this cookie can exist in the broswer
-    keys:['fdfdfdgdfgf']   // needs to be secure
-  })
-)
+
 
 
 
