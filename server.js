@@ -11,7 +11,7 @@ require('./services/passport');
 
 const keys = require('./config/keys');
 
-mongoose.connect(keys.mongoURL); // use your own URL.
+mongoose.connect('mongodb://YI:a1234@ds135916.mlab.com:35916/forum'); // use your own URL.
 
 const app = express();
 const cors = require('cors'); // allow corss-domain communication.
