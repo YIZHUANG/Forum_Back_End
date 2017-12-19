@@ -1,11 +1,12 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 require('../model/post'); //import the schema
 const Threads=mongoose.model('threads'); //import the schema
 
+
 module.exports = app => {
   app.put('/comment/:postId',(req,res) => {   //save comments to the post
-    var threads=new Threads();
-    var comments=req.body;
+    const threads=new Threads();
+    const comments=req.body;
     if(!comments||comments===""){             //error handling, comment must have text.
       res.status(500).send({error:"Your comment mush have some text"});
     }else{

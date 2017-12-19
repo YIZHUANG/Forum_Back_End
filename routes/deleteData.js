@@ -1,6 +1,7 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 require("../model/post"); //import the schema
 const Threads = mongoose.model("threads"); //import the schema
+
 
 module.exports = app => {
   app.delete("/listOfPosts/:id", (req, res) => {
