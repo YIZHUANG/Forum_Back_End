@@ -19,7 +19,7 @@ const cors = require('cors'); // allow corss-domain communication.
 app.use(
   cookieSession({
     maxAge:30 * 24 * 60 * 60 * 1000,    //30 days.     //how long this cookie can exist in the broswer
-    keys:[keys.cookieKey]   // needs to be secure
+    keys:['fdfdfdgdfgf']   // needs to be secure
   })
 )
 app.use(cors());  // allow corss-domain communication.
