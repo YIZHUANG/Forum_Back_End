@@ -1,17 +1,14 @@
 const express = require('express');
-var session = require("express-session"),
-    bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const cookieSession= require('cookie-session'); //tell express to make use of cookies
 const passport=require('passport'); //tell express to make use of cookies
-var flash = require('connect-flash');
 
 require("./model/user");
 require('./services/passport');
 
-const keys = require('./config/keys');
-
-mongoose.connect('mongodb://YI:a1234@ds135916.mlab.com:35916/forum'); // use your own URL.
+const url="mongodb://YI:a1234@ds135916.mlab.com:35916/forum";
+mongoose.connect(url); // use your own URL.
 
 const app = express();
 const cors = require('cors'); // allow corss-domain communication.
@@ -29,7 +26,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
 
 
 
