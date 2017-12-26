@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
+const key = require('/config/keys');
 
-const url="mongodb://YI:a1234@ds135916.mlab.com:35916/forum";
+const url=keys.mongoURL;
+
 mongoose.connect(url); // use your own URL.
 
 const app = express();
